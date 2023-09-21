@@ -1,6 +1,8 @@
 .DS_Store
 *.parquet
 *.json
+*.zip
+spark-warehouse
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

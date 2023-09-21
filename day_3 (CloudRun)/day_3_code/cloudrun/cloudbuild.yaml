@@ -1,0 +1,11 @@
+# cloudbuild.yaml
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/${_PROJECT_ID}/${_IMAGE_NAME}:${_TAG}', '.' ]
+
+substitutions:
+    _PROJECT_ID: durable-limiter-396112 # default value
+    _IMAGE_NAME: simple-image    # default value
+    _TAG: v1.0
+images:
+- 'gcr.io/${_PROJECT_ID}/${_IMAGE_NAME}:${_TAG}'

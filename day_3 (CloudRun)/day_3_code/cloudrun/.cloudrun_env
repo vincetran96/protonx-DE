@@ -1,0 +1,5 @@
+PROJECT_ID=durable-limiter-396112
+IMAGE=simple-image
+TAG=v1.0
+JOB_NAME=simple-job 
+SERVICE_ACCOUNT=batch-job-service-account@durable-limiter-396112.iam.gserviceaccount.com
