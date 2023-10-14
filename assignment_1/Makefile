@@ -66,7 +66,7 @@ build_cloud_image:
 create_cloud_run_job: build_cloud_image
 	@echo "Updated Cloud Run Job for project_id: $(PROJECT_ID)"
 	@cd ./batch_job/cloud_run_batch_job; 
-		gcloud run jobs update $(JOB_NAME) \
+		gcloud run jobs create $(JOB_NAME) \
             --project $(PROJECT_ID) \
 			--region asia-east1 \
             --image gcr.io/$(PROJECT_ID)/$(CLOUD_RUN_IMAGE_NAME):$(TAG) \

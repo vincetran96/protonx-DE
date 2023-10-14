@@ -2,6 +2,9 @@
 *.parquet
 *.json
 *.zip
+*.tgz
+*.properties
+*.key
 spark-warehouse
 
 # Byte-compiled / optimized / DLL files

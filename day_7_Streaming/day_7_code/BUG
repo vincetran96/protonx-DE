@@ -1,0 +1,9 @@
+Khi bị lỗi download ở folder: ~/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/
+1. Tìm version file có dạng com/google/code/findbugs/jsr305/3.0.0 
+trên trang https://mvnrepository.com/
+2. Down file jar ở dòng Files hoặc lấy link của file đó 
+vd :https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar 
+
+Copy file đó vào folder bị lỗi hoặc:
+cd ~/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/
+wget https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar

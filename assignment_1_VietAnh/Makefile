@@ -72,7 +72,7 @@ create_cloud_run_job: build_cloud_image
             --image gcr.io/$(PROJECT_ID)/$(CLOUD_RUN_IMAGE_NAME):$(TAG) \
             --memory $(MEMORY) \
             --max-retries 1 \
-            --service-account $(SERVICE_ACCOUNT)			
+            --service-account $(SERVICE_ACCOUNT)
 
 trigger_cloud_run_job: 
 	@echo "Trigger Cloud Run Job"
