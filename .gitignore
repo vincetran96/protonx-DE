@@ -6,6 +6,10 @@
 *.properties
 *.key
 spark-warehouse
+checkpoint
+.terraform/
+.terramform*
+terraform.tfstate*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

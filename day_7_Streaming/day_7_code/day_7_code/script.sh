@@ -1,5 +1,6 @@
 --- Socket Port 
 nc -lk 9090
+# nc -l -p 9090 # For MacOS
 
 --- Create Topic 
 
