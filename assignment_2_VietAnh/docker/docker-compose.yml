@@ -1,0 +1,46 @@
+version: "3.9"
+
+# networks:
+#   protonx-network:
+#     name: protonx
+#     driver: bridge
+
+services:
+  functional_pipeline_test_postgresdb:
+    container_name: "onprem_postgresdb"
+    build: "./postgres_local/."
+    environment: 
+      - POSTGRES_PASSWORD=123
+    ports:
+      - "5433:5432"
+    # extra_hosts:
+    # - "docker.for.mac.host.internal:host-gateway"
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: always
+
+  redis:
+    image: redis:latest
+    # expose:
+    #   - 6379
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 30s
+      retries: 50
+      start_period: 30s
+    restart: always

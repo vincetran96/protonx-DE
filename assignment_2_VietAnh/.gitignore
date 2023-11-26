@@ -1,0 +1,10 @@
+*.pid
+*.cfg.*
+*password*
+*.db
+*.ini
+
+logs/
+keys/
+plugins/
+data/

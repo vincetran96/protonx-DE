@@ -1,0 +1,1 @@
+docker build -t protonx-airflow:test -f airflow-dockerfile --no-cache .

@@ -1,0 +1,8 @@
+pyspark==3.4.1
+pytest==7.4.0
+pyarrow==13.0.0
+python-decouple==3.8
+pandas==2.0.3
+apache-airflow==2.7.2
+apache-airflow-providers-postgres==5.7.1
+apache-airflow-providers-google==10.10.1
